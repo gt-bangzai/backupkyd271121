@@ -66,14 +66,10 @@ class SignIn extends React.Component {
                             <Col md="8" className="box-left"><img className="img-log2" src={loginPro} alt="login-pro" /></Col>
                             <Col md="4">
                                 <Row>
-
                                     <Col md="2" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faGoogle} size='2x' href="https://account.google.com" /></Col>
                                     <Col md="3" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faFacebook} size='2x' href="https://facebook/kbbukopin" /></Col>
                                     <Col md="3" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faTwitter} size='2x' href="https://twitter/SiagaBukopin" /></Col>
                                     <Col md="1" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faInstagram} size='2x' href="https://instagram/SiagaBukopin" /></Col>
-
-
-
                                     <Col md="12">
                                         <Row>
                                             <Row className="wrap-connect">
