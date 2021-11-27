@@ -37,6 +37,8 @@
     display: flex;
     justify-content: flex-end;
     font-size: 20px; 
+    
+
 }
 
 .style-nav {
@@ -65,7 +67,7 @@
 }
 
 .title-signup {
-    font-family: Roboto;
+    font-family: 'Nunito Sans', sans-serif;
     color: #5b574d;
     text-align: center;
     font-size: 30px;

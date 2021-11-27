@@ -1,10 +1,11 @@
 import React from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import loginPro from '../../Assets/images/loginprof.png'
-
 import { connect } from 'react-redux'
 import { loginUserAPI } from '../../Actions/auth';
 import Button from '../../Components/Atoms/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGoogle, faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 
 class SignIn extends React.Component {
@@ -16,44 +17,45 @@ class SignIn extends React.Component {
 
     handleChangeText = (e) => {
         this.setState({
-            [e.target.id]: e.target.value ,
+            [e.target.id]: e.target.value,
             [e.target.id]: e.target.value
         })
     }
 
     handleSignIn = async () => {
-        const {username, password} = this.state 
-        const resLogin = await this.props.loginAPI({username, password}).catch(err => err)
-        if(resLogin){
-            if(resLogin.role === 'admin'){
+        const { username, password } = this.state
+        const resLogin = await this.props.loginAPI({ username, password }).catch(err => err)
+        if (resLogin) {
+            if (resLogin.role === 'admin') {
                 window.location.href = '/dashboardadmin'
-            }else {
+            } else {
                 window.location.href = '/dashboardmember'
             }
             // this.props.navigate('/')
             // window.location.reload()
             // console.log(resLogin)
-        }else {
+        } else {
             alert("Wrong User Or Password")
             window.location.reload()
         }
-    }   
+    }
 
     render() {
-        if (this.props.isLogin){
-            if(this.props.Role === 'admin'){
+        if (this.props.isLogin) {
+            if (this.props.Role === 'admin') {
                 window.location.href = '/dashboardadmin';
                 // console.log(this.props.Role)
-            }else {
+            } else {
                 window.location.href = '/dashboardmember';
                 console.log(this.props)
-            }            
+            }
         }
 
         return (
             <Container fluid id="#main-component" style={{
                 backgroundImage: `url(${require('../../Assets/images/bgsign.png').default})`
-            , backgroundSize: 'cover'}}>
+                , backgroundSize: 'cover'
+            }}>
                 <Row className="bg-sign">
                     <Col md="12" className="wrap-login">
                         <Row className="wrap-box2">
@@ -64,8 +66,18 @@ class SignIn extends React.Component {
                             <Col md="8" className="box-left"><img className="img-log2" src={loginPro} alt="login-pro" /></Col>
                             <Col md="4">
                                 <Row>
+
+                                    <Col md="2" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faGoogle} size='2x' href="https://account.google.com" /></Col>
+                                    <Col md="3" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faFacebook} size='2x' href="https://facebook/kbbukopin" /></Col>
+                                    <Col md="3" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faTwitter} size='2x' href="https://twitter/SiagaBukopin" /></Col>
+                                    <Col md="1" align="center" className="style-iconbrand"><FontAwesomeIcon icon={faInstagram} size='2x' href="https://instagram/SiagaBukopin" /></Col>
+
+
+
                                     <Col md="12">
                                         <Row>
+                                            <Row className="wrap-connect">
+                                            </Row>
                                             <Col md="4"><hr className="style-hr-1" /></Col>
                                             <Col md="4"><p className="style-text">or Sign in with Email</p></Col>
                                             <Col md="4"><hr className="style-hr-1" /></Col>
@@ -74,9 +86,9 @@ class SignIn extends React.Component {
                                     <Col md="12" className="style-inp-login">
                                         <Form.Group className="mb-3">
                                             <Form.Label>Username</Form.Label>
-                                            <Form.Control 
-                                                type="text" 
-                                                className="form-input" 
+                                            <Form.Control
+                                                type="text"
+                                                className="form-input"
                                                 name="username"
                                                 onChange={this.handleChangeText}
                                                 id="username"
@@ -84,9 +96,9 @@ class SignIn extends React.Component {
                                         </Form.Group>
                                         <Form.Group className="mb-3">
                                             <Form.Label>Password</Form.Label>
-                                            <Form.Control 
-                                                type="password" 
-                                                className="form-input" 
+                                            <Form.Control
+                                                type="password"
+                                                className="form-input"
                                                 name="password"
                                                 onChange={this.handleChangeText}
                                                 id="password"

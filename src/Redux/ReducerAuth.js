@@ -17,7 +17,7 @@ if (token) {
         }
 
     } else {
-        console.log("enggak kok")
+        console.log("Authorization")
         console.log(aku.role)
         initialState = {
             user: aku.username,
