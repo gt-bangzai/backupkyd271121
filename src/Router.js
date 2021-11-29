@@ -11,6 +11,7 @@ import UserUploadForm from './Components/User.uploadform'
 import DashFormKPR from './Components/User.formkprupload'
 import DashIdentitas from './Components/User.formidentitas'
 import DashSlip from './Components/User.formslip'
+// import Simulasi from './Components/calculator/Calculator'
 
 
 import { Provider } from "react-redux";
@@ -36,6 +37,7 @@ class Routs extends React.Component {
                     <Route path="/ajukankpr/formidentitas" element={ <DashIdentitas /> }></Route>
                     <Route path="/ajukankpr/formslip" element={ <DashSlip /> }></Route>
                     <Route path="/dashboardmember/uploadform" element={ <UserUploadForm /> }></Route>
+
                 </Routes>
             </Router>
             </Provider>
