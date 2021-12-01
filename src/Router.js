@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
 import Home from './Components/Landing'
 import Login2 from './Components/Signin'
 import Register from './Components/Reg'
@@ -11,6 +10,7 @@ import UserUploadForm from './Components/User.uploadform'
 import DashFormKPR from './Components/User.formkprupload'
 import DashIdentitas from './Components/User.formidentitas'
 import DashSlip from './Components/User.formslip'
+import DashSimulasi from './Components/DashboardSimulasi'
 // import Simulasi from './Components/calculator/Calculator'
 
 
@@ -30,6 +30,7 @@ class Routs extends React.Component {
                     <Route path="/" element={ <Home /> }></Route>
                     <Route path="/signin" element={ <Login2 /> }></Route>
                     <Route path="/register" element={ <Register /> }></Route>
+                    <Route path="/dashboardsimulasi" element={ <DashSimulasi /> }></Route>
                     <Route path="/dashboardadmin" element={ <DashAdmin /> }></Route>
                     <Route path="/dashboardmember" element={ <DashUser /> }></Route>
                     <Route path="/ajukankpr" element={ <DashAjukan /> }></Route>

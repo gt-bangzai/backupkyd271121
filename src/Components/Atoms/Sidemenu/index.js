@@ -17,7 +17,7 @@ class SideMenu extends React.Component {
                         <img className="ico" src={icoDashboard} alt="dashboard" /><Nav.Link href="/dashboardmember">Dashboard</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
-                        <img className="ico" src={icoSimulasi} alt="simulasi" /><Nav.Link href="/simulasikpr">Simulasi KPR</Nav.Link>
+                        <img className="ico" src={icoSimulasi} alt="simulasi" /><Nav.Link href="/dashboardsimulasi">Simulasi KPR</Nav.Link>
                     </Col>
                     <Col md="12" className="wrap-ico">
                         <img className="ico" src={icoAjukan} alt="ajukan" /><Nav.Link href="/ajukankpr">Ajukan KPR</Nav.Link>
